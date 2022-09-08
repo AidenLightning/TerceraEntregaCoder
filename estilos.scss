@@ -1,0 +1,497 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+$colorgrad1: linear-gradient(to right, #000000, #9e382c);
+$colorgrad2: linear-gradient(to left, #702e2e, #3a1818);
+$colorgrad3: linear-gradient(to right, #000000, #4b1d1d);
+$hovercolor: yellowgreen;
+
+body{
+    background-color: black;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    background: $colorgrad1;
+    height: 100%;
+    width: 100%;
+    font-size: 30px;
+    color: whitesmoke;
+    text-shadow: 1px 1px 5px #000;
+}
+.barra{
+    padding-top: 35px;
+    padding-right: 25px;
+    li{
+        display: inline;
+        list-style: none;
+        letter-spacing: 2px;
+        padding: 10px;
+    }
+    a{
+        text-decoration: none;
+        color: whitesmoke;
+    }
+    a:hover{
+        color: $hovercolor;
+    }
+}
+.logo{
+    display: inline-flex;
+    font-size: 35px;
+    padding: 27px;
+    padding-left: 50px;
+    padding-top: 32px;
+    text-align: center;
+    animation-name: logoefecto;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 3.5s;
+    animation-delay: 0s;
+    img{
+        padding-right: 10px;
+    }
+}
+@keyframes logoefecto{
+    0%{ scale: 1.0;}
+    50%{ scale: 1.3;
+    color: $hovercolor;}
+    100%{scale: 1.0;}
+}
+nav{
+    display: none;
+}
+.fa-bars{
+    padding: 35px;
+    margin-right: 50px;
+    &:hover{
+        color: $hovercolor;
+    }
+}
+.menu{
+    ul{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+        color: whitesmoke;
+        text-shadow: 1px 1px 5px #000;
+    }
+    a:hover{
+        color: $hovercolor;
+    }
+    ul ul{
+        text-align: center;
+        position: absolute;
+        top: 90px;
+        right: 20px;
+        display: none;
+        background-color: rgb(0, 0, 0, .8);
+        padding: 10px;
+    }
+}
+
+.menu ul li:hover ul{
+    display: block;
+}
+main{
+    display: flex;
+}
+.nleft{
+    background-image: url(./media/Foto2.PNG);
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 50%;
+    border: 2px solid #000;
+    border-style: solid;
+    min-height: 350px;
+    margin-left: 5px;
+    margin-right: 2.5px;
+    border-radius: 5px;
+}
+.nright{
+    background: $colorgrad2;
+    color: whitesmoke;
+    padding: 10px;
+    padding-top: 40px;
+    font-size: 17px;
+    text-align: center;
+    width: 50%;
+    height: 300px;
+    text-shadow: 1px 1px 5px #000;
+    border: 2px solid #000;
+    min-height: 350px;
+    box-shadow: 1px 1px 5px #000;
+    margin-left: 2.5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    h1{
+        font-size: 45px;
+        padding-top: 20px;
+    }
+    h1:hover{
+        color: $hovercolor;
+    }
+}
+.banner{
+    background-image: url(./media/AidenBanner.jpg);
+    height: 300px;
+    width: auto;
+    background-size: cover;
+    background-position: center;
+}
+.galeria{
+    width: 100%;
+    height: auto;
+    background-color: rgb(135, 141, 143, .3);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 200px);
+    padding: 20px;
+    grid-gap: 20px;
+}
+.item{
+    background-color: rgb(135, 141, 143, .3);
+    border: 2px solid #000;
+    width: 100%;
+    box-shadow: 1px 1px 5px #000;
+    border-radius: 5px;
+    filter: grayscale(100%);
+    &:hover{
+        transform: scale(1.05);
+        transition: all 0.8s;
+        filter: grayscale(0%);
+    }
+}
+@mixin galery1prop{
+    background-size: cover;
+    background-position: center;
+}
+
+.item1{
+    background-image: url(./media/Aiden1.jpg);
+@include galery1prop;
+}
+.item2{
+    background-image: url(./media/Aiden2.jpg);
+    @include galery1prop;
+}
+.item3{
+    background-image: url(./media/Aidenli.PNG);
+    @include galery1prop;
+}
+.item4{
+    background-image: url(./media/Aideno.jpg);
+    @include galery1prop;
+}
+footer{
+    font-size: 15px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background: $colorgrad1;
+    text-align: center;
+    color: whitesmoke;
+    text-shadow: 1px 1px 5px #000;
+}
+
+$redes:(
+    facebook: rgb(0, 132, 255, 0.5),
+    instagram: rgba(255, 0, 200, 0.5),
+    twitch: purple
+);
+@each $red, $colours in $redes {
+    .fa-#{$red} {
+        background-color: $colours;
+        color: antiquewhite;
+        border-radius: 5px;
+    }
+}
+
+.fa-brands{
+    padding-top: 10px;
+    font-size: 40px;
+    padding: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.fa-brands:hover{
+    transform: scale(1.1);
+    transition: all 0.7s;
+    color: $hovercolor;
+}
+
+.call{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    color: whitesmoke;
+    padding: 50px;
+    text-align: center;
+    background: $colorgrad3;
+}
+.item5{
+    filter: grayscale(0%);
+}
+.item6{
+    @extend .item5;
+}
+.item7{
+    @extend .item5;
+}
+.item8{
+    @extend .item5;
+}
+.itemgal{
+    background-color: rgb(135, 141, 143, .3);
+    border: 2px solid #000;
+    width: 100%;
+    box-shadow: 1px 1px 5px #000;
+    border-radius: 5px;
+}
+.itemgal:hover{
+    transform: scale(1.05);
+    transition: all 0.8s;
+}
+.galeria2{
+    height: auto;
+    width: 100%;
+    background-color: rgb(135, 141, 143, .3);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 250px);
+                        grid-gap: 20px;
+                        padding: 20px;
+                        border-radius: 7px;
+}
+@mixin galery2prop{
+    background-size: cover;
+    background-position: top;
+}
+.item11{
+    background-image: url(./media/Foto1.jpg);
+    @include galery2prop;
+}
+.item21{
+    background-image: url(./media/Aiden1.jpg);
+    @include galery1prop;
+}
+.item31{
+    background-image: url(./media/Aiden2.jpg);
+    @include galery1prop;
+}
+.item41{
+    background-image: url(./media/Aiden4.jpg);
+    @include galery2prop;
+}
+.item51{
+    background-image: url(./media/Aideno.jpg);
+    @include galery1prop;
+}
+.item61{
+    background-image: url(./media/AidenMore.jpg);
+    @include galery2prop;
+}
+.item71{
+    background-image: url(./media/Aiden3.jpg);
+    @include galery1prop;
+}
+.item81{
+    background-image: url(./media/Aidenli.PNG);
+    @include galery1prop;
+}
+.calendar{
+    color: whitesmoke;
+    padding: 50px;
+    text-align: center;
+    background: $colorgrad3;
+    th:hover{
+        color: greenyellow;
+    }
+    td:hover{
+        color: greenyellow;
+    }
+}
+.table{
+    margin-left: auto;
+    margin-right: auto;
+    border: #9e382c solid;
+    border-radius: 5px;
+}
+
+form{
+    display: block;
+    color: whitesmoke;
+    text-align: center;
+    margin-right: 100px;
+    margin-left: 100px;
+    padding: 20px;
+    border: #9e382c solid;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+@media only screen and (min-width:770px){
+    .banner{
+        height: 500px;
+    }
+    .galeria{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 400px 400px;
+        padding: 30px;
+        grid-gap: 30px;
+    }
+    .item:hover{
+        transform: scale(1.1);
+        transition: all 0.8s;
+        filter: grayscale(0%);
+    }
+    .galeria2{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 400px);
+        padding: 30px;
+        grid-gap: 30px;
+    }
+    .itemgal:hover{
+        transform: scale(1.1);
+        transition: all 0.8s;
+    }
+    .nleft{
+        height: 500px;
+    }
+    .nright{
+        height: 500px;
+        font-size: 25px;
+    }
+    .fa-brands{
+        font-size: 60px;
+    }
+}
+@media only screen and (min-width: 1100px){
+    .banner{
+        height: 700px;
+    }
+    .galeria{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 450px 450px;
+        padding: 50px;
+        grid-gap: 35px;
+    }
+    .galeria2{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(3, 450px);
+        padding: 50px;
+        grid-gap: 35px;
+    }
+    .item51{
+        grid-column: 2/4;
+        grid-row: 2/3;
+    }
+    .nleft{
+    height: 600px;
+    }
+    .nright{
+    height: 600px;
+    font-size: 28px;
+    }
+    nav{
+        display: block;
+    }
+    .menu{
+        display: none;
+    }
+}
+@media only screen and (min-width: 1300px){
+    .galeria{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 450px 450px;
+        padding: 50px;
+        grid-gap: 50px;
+    }
+    .item:hover{
+        transform: scale(1.05);
+        transition: all 0.8s;
+        filter: grayscale(0%);
+    }
+    .galeria2{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(3, 300px);
+        padding: 40px;
+        grid-gap: 40px;
+    }
+    .item11{
+        grid-column: 1/2;
+        grid-row: 1/3;
+        background-position: left;
+    }
+    .item21{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    .item31{
+        grid-column: 3/5;
+        grid-row: 1/2;
+    }
+    .item81{
+        grid-column: 3/5;
+        grid-row: 3/4;
+    }
+    .itemgal:hover{
+        transform: scale(1.08);
+        transition: all 0.8s;
+        filter: grayscale(0%);
+    }
+    .nleft{
+    height: 600px;
+    }
+    .nright{
+    height: 600px;
+    font-size: 30px;
+    }
+    nav{
+        display: block;
+    }
+    .menu{
+        display: none;
+    }
+}
+@media only screen and (min-width: 2000px){
+    .banner{
+        height: 1000px;
+    }
+    .galeria{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 450px 450px;
+        padding: 50px;
+        grid-gap: 80px;
+    }
+    .galeria2{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(3, 400px);
+        padding: 40px;
+        grid-gap: 50px;
+    }
+    .itemgal:hover{
+        transform: scale(1.05);
+        transition: all 0.8s;
+        filter: grayscale(0%);
+    }
+    .nleft{
+    height: 600px;
+    }
+    .nright{
+    height: 600px;
+    font-size: 35px;
+    }
+    nav{
+        display: block;
+    }
+    .menu{
+        display: none;
+    }
+}

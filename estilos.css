@@ -1,0 +1,545 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+body {
+  background-color: black;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(to right, #000000, #9e382c);
+  height: 100%;
+  width: 100%;
+  font-size: 30px;
+  color: whitesmoke;
+  text-shadow: 1px 1px 5px #000;
+}
+
+.barra {
+  padding-top: 35px;
+  padding-right: 25px;
+}
+.barra li {
+  display: inline;
+  list-style: none;
+  letter-spacing: 2px;
+  padding: 10px;
+}
+.barra a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+.barra a:hover {
+  color: yellowgreen;
+}
+
+.logo {
+  display: inline-flex;
+  font-size: 35px;
+  padding: 27px;
+  padding-left: 50px;
+  padding-top: 32px;
+  text-align: center;
+  -webkit-animation-name: logoefecto;
+          animation-name: logoefecto;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-duration: 3.5s;
+          animation-duration: 3.5s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.logo img {
+  padding-right: 10px;
+}
+
+@-webkit-keyframes logoefecto {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.3;
+    color: yellowgreen;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+@keyframes logoefecto {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.3;
+    color: yellowgreen;
+  }
+  100% {
+    scale: 1;
+  }
+}
+nav {
+  display: none;
+}
+
+.fa-bars {
+  padding: 35px;
+  margin-right: 50px;
+}
+.fa-bars:hover {
+  color: yellowgreen;
+}
+
+.menu ul {
+  list-style: none;
+}
+.menu a {
+  text-decoration: none;
+  color: whitesmoke;
+  text-shadow: 1px 1px 5px #000;
+}
+.menu a:hover {
+  color: yellowgreen;
+}
+.menu ul ul {
+  text-align: center;
+  position: absolute;
+  top: 90px;
+  right: 20px;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+}
+
+.menu ul li:hover ul {
+  display: block;
+}
+
+main {
+  display: flex;
+}
+
+.nleft {
+  background-image: url(./media/Foto2.PNG);
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  width: 50%;
+  border: 2px solid #000;
+  border-style: solid;
+  min-height: 350px;
+  margin-left: 5px;
+  margin-right: 2.5px;
+  border-radius: 5px;
+}
+
+.nright {
+  background: linear-gradient(to left, #702e2e, #3a1818);
+  color: whitesmoke;
+  padding: 10px;
+  padding-top: 40px;
+  font-size: 17px;
+  text-align: center;
+  width: 50%;
+  height: 300px;
+  text-shadow: 1px 1px 5px #000;
+  border: 2px solid #000;
+  min-height: 350px;
+  box-shadow: 1px 1px 5px #000;
+  margin-left: 2.5px;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+.nright h1 {
+  font-size: 45px;
+  padding-top: 20px;
+}
+.nright h1:hover {
+  color: yellowgreen;
+}
+
+.banner {
+  background-image: url(./media/AidenBanner.jpg);
+  height: 300px;
+  width: auto;
+  background-size: cover;
+  background-position: center;
+}
+
+.galeria {
+  width: 100%;
+  height: auto;
+  background-color: rgba(135, 141, 143, 0.3);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 200px);
+  padding: 20px;
+  grid-gap: 20px;
+}
+
+.item {
+  background-color: rgba(135, 141, 143, 0.3);
+  border: 2px solid #000;
+  width: 100%;
+  box-shadow: 1px 1px 5px #000;
+  border-radius: 5px;
+  filter: grayscale(100%);
+}
+.item:hover {
+  transform: scale(1.05);
+  transition: all 0.8s;
+  filter: grayscale(0%);
+}
+
+.item1 {
+  background-image: url(./media/Aiden1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.item2 {
+  background-image: url(./media/Aiden2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.item3 {
+  background-image: url(./media/Aidenli.PNG);
+  background-size: cover;
+  background-position: center;
+}
+
+.item4 {
+  background-image: url(./media/Aideno.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+footer {
+  font-size: 15px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  background: linear-gradient(to right, #000000, #9e382c);
+  text-align: center;
+  color: whitesmoke;
+  text-shadow: 1px 1px 5px #000;
+}
+
+.fa-facebook {
+  background-color: rgba(0, 132, 255, 0.5);
+  color: antiquewhite;
+  border-radius: 5px;
+}
+
+.fa-instagram {
+  background-color: rgba(255, 0, 200, 0.5);
+  color: antiquewhite;
+  border-radius: 5px;
+}
+
+.fa-twitch {
+  background-color: purple;
+  color: antiquewhite;
+  border-radius: 5px;
+}
+
+.fa-brands {
+  padding-top: 10px;
+  font-size: 40px;
+  padding: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.fa-brands:hover {
+  transform: scale(1.1);
+  transition: all 0.7s;
+  color: yellowgreen;
+}
+
+.call {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  color: whitesmoke;
+  padding: 50px;
+  text-align: center;
+  background: linear-gradient(to right, #000000, #4b1d1d);
+}
+
+.item5, .item8, .item7, .item6 {
+  filter: grayscale(0%);
+}
+
+.itemgal {
+  background-color: rgba(135, 141, 143, 0.3);
+  border: 2px solid #000;
+  width: 100%;
+  box-shadow: 1px 1px 5px #000;
+  border-radius: 5px;
+}
+
+.itemgal:hover {
+  transform: scale(1.05);
+  transition: all 0.8s;
+}
+
+.galeria2 {
+  height: auto;
+  width: 100%;
+  background-color: rgba(135, 141, 143, 0.3);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(8, 250px);
+  grid-gap: 20px;
+  padding: 20px;
+  border-radius: 7px;
+}
+
+.item11 {
+  background-image: url(./media/Foto1.jpg);
+  background-size: cover;
+  background-position: top;
+}
+
+.item21 {
+  background-image: url(./media/Aiden1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.item31 {
+  background-image: url(./media/Aiden2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.item41 {
+  background-image: url(./media/Aiden4.jpg);
+  background-size: cover;
+  background-position: top;
+}
+
+.item51 {
+  background-image: url(./media/Aideno.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.item61 {
+  background-image: url(./media/AidenMore.jpg);
+  background-size: cover;
+  background-position: top;
+}
+
+.item71 {
+  background-image: url(./media/Aiden3.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.item81 {
+  background-image: url(./media/Aidenli.PNG);
+  background-size: cover;
+  background-position: center;
+}
+
+.calendar {
+  color: whitesmoke;
+  padding: 50px;
+  text-align: center;
+  background: linear-gradient(to right, #000000, #4b1d1d);
+}
+.calendar th:hover {
+  color: greenyellow;
+}
+.calendar td:hover {
+  color: greenyellow;
+}
+
+.table {
+  margin-left: auto;
+  margin-right: auto;
+  border: #9e382c solid;
+  border-radius: 5px;
+}
+
+form {
+  display: block;
+  color: whitesmoke;
+  text-align: center;
+  margin-right: 100px;
+  margin-left: 100px;
+  padding: 20px;
+  border: #9e382c solid;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+@media only screen and (min-width: 770px) {
+  .banner {
+    height: 500px;
+  }
+  .galeria {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 400px 400px;
+    padding: 30px;
+    grid-gap: 30px;
+  }
+  .item:hover {
+    transform: scale(1.1);
+    transition: all 0.8s;
+    filter: grayscale(0%);
+  }
+  .galeria2 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 400px);
+    padding: 30px;
+    grid-gap: 30px;
+  }
+  .itemgal:hover {
+    transform: scale(1.1);
+    transition: all 0.8s;
+  }
+  .nleft {
+    height: 500px;
+  }
+  .nright {
+    height: 500px;
+    font-size: 25px;
+  }
+  .fa-brands {
+    font-size: 60px;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .banner {
+    height: 700px;
+  }
+  .galeria {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 450px 450px;
+    padding: 50px;
+    grid-gap: 35px;
+  }
+  .galeria2 {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 450px);
+    padding: 50px;
+    grid-gap: 35px;
+  }
+  .item51 {
+    grid-column: 2/4;
+    grid-row: 2/3;
+  }
+  .nleft {
+    height: 600px;
+  }
+  .nright {
+    height: 600px;
+    font-size: 28px;
+  }
+  nav {
+    display: block;
+  }
+  .menu {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .galeria {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 450px 450px;
+    padding: 50px;
+    grid-gap: 50px;
+  }
+  .item:hover {
+    transform: scale(1.05);
+    transition: all 0.8s;
+    filter: grayscale(0%);
+  }
+  .galeria2 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 300px);
+    padding: 40px;
+    grid-gap: 40px;
+  }
+  .item11 {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    background-position: left;
+  }
+  .item21 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .item31 {
+    grid-column: 3/5;
+    grid-row: 1/2;
+  }
+  .item81 {
+    grid-column: 3/5;
+    grid-row: 3/4;
+  }
+  .itemgal:hover {
+    transform: scale(1.08);
+    transition: all 0.8s;
+    filter: grayscale(0%);
+  }
+  .nleft {
+    height: 600px;
+  }
+  .nright {
+    height: 600px;
+    font-size: 30px;
+  }
+  nav {
+    display: block;
+  }
+  .menu {
+    display: none;
+  }
+}
+@media only screen and (min-width: 2000px) {
+  .banner {
+    height: 1000px;
+  }
+  .galeria {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 450px 450px;
+    padding: 50px;
+    grid-gap: 80px;
+  }
+  .galeria2 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 400px);
+    padding: 40px;
+    grid-gap: 50px;
+  }
+  .itemgal:hover {
+    transform: scale(1.05);
+    transition: all 0.8s;
+    filter: grayscale(0%);
+  }
+  .nleft {
+    height: 600px;
+  }
+  .nright {
+    height: 600px;
+    font-size: 35px;
+  }
+  nav {
+    display: block;
+  }
+  .menu {
+    display: none;
+  }
+}/*# sourceMappingURL=estilos.css.map */
